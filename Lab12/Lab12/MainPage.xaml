@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab12.MainPage">
+
+   
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="myListView" SeparatorColor="Gray">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                         <TextCell 
+                            Text="{Binding Title}"
+                            DetailColor="Black"
+                            Detail="{Binding Description}"
+                            
+                             />
+                             
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button  HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand" 
+                     x:Name="Item1" Text="New Task" />
+
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
